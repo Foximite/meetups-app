@@ -2,8 +2,6 @@
 import React from "react"
 import NewMeetupForm from "../components/meetups/NewMeetupForm"
 import { useRouter } from "next/navigation";
-import type { Metadata } from 'next'
-
 
 interface MeetupData {
     title: string;
@@ -12,11 +10,8 @@ interface MeetupData {
     description: string;
   }
 
-
-export default function newMeetup(){
-
+export default function NewMeetup(){
     const router = useRouter();
-    
     async function addMeetupHandler(enteredMeetupData: MeetupData){
         const response = await fetch('new-meetup/api/',{
             method: 'POST',
@@ -28,7 +23,6 @@ export default function newMeetup(){
 
 
         const data = await response.json();
-
         console.log(data)
         router.push('/')
         
