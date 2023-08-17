@@ -4,10 +4,6 @@ import NewMeetupForm from "../components/meetups/NewMeetupForm"
 import { useRouter } from "next/navigation";
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-    title: 'Add new Meetup',
-    description: 'Engage with your comunity'
-  }
 
 interface MeetupData {
     title: string;
