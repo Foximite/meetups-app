@@ -12,10 +12,8 @@ interface MeetupData {
     description: string;
   }
 
-
-export default function newMeetup(){
-
     const router = useRouter();
+export default function newMeetup(){
     
     async function addMeetupHandler(enteredMeetupData: MeetupData){
         const response = await fetch('new-meetup/api/',{
